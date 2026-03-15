@@ -15,7 +15,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 ?>
-
+>?php 
+include 'Header.php';
+?>
 <body>
     <div>
     <form action="Register.php" method="post">

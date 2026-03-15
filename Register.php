@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 include 'Header.php';
 ?>
 <body>
-    <div>
+    <div class="Form">
     <form action="Register.php" method="post">
         <label for="name">Name</label>
         <input type="text" name="name" placeholder="Name">

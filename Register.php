@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $sql = "INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password', '$role')";
     if(mysqli_query($conn, $sql)){
-        echo "New record created successfully";
+        echo "You have Registered successfully";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }

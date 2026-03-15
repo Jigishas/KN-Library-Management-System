@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 ?>
->?php 
+<?php 
 include 'Header.php';
 ?>
 <body>

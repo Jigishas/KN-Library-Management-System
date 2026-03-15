@@ -22,10 +22,34 @@ body{
 .Form{
     width: 300px;
     margin: 50px auto;
-    
+
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 7px;
 
+}
+.Form h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(94, 152, 7);
+    text-decoration: underline;
+}
+.Form input[type="text"],
+.Form input[type="email"],
+.Form input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.Form button[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

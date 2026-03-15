@@ -20,7 +20,8 @@ include 'Header.php';
 ?>
 <body>
     <div class="Form">
-    <form action="Register.php" method="post">
+        <h2>Register</h2>
+    <form action="Register.php" method="post" class="form-object">
         <label for="name">Name</label>
         <input type="text" name="name" placeholder="Name">
         <br>

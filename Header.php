@@ -6,7 +6,5 @@
     <link rel="stylesheet" href="Styles.css">
     <title>Library</title>
 </head>
-<body>
-    
-</body>
+
 </html>

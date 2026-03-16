@@ -21,10 +21,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <div class="Form">
         <h2>Login</h2>
     <form action="Login.php" method="post" class="form-object">
-        <label for="email">Email</label>
+        <label for="email">Email:</label>
         <input type="email" name="email" placeholder="Email">
         <br>
-        <label for="password">Password</label>
+        <label for="password">Password:</label>
         <input type="password" name="password" placeholder="Password">
         <br>
         <button type="submit">Login</button>

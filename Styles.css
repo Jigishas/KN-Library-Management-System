@@ -53,3 +53,6 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
+.Form button[type="submit"]:hover{
+    background-color: #555;
+}

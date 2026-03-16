@@ -11,6 +11,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result) > 0){
         echo "You have logged in successfully";
+        session_start();
+        $_SESSION['email'] = $email;
+        $query = "SELECT name FROM users WHERE email='$email'";
+        $result = mysqli_query($conn, $query);
+        $_SESSION['name'] = $query;
+        header("Location: Dashboard.php");
+        exit();
     } else {
         echo "Invalid email or password";
     }
@@ -28,6 +35,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <input type="password" name="password" placeholder="Password">
         <br>
         <button type="submit">Login</button>
+        <a href="Register.php">Register</a>
 
     </form>
     </div>

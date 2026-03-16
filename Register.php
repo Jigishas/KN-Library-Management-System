@@ -1,4 +1,20 @@
 <?php 
+ function sanitize_input($name, $email, $password){
+     $name = trim($name);
+     $name = stripslashes($name);
+     $name = htmlspecialchars($name);
+
+     $email = trim($email);
+     $email = stripslashes($email);
+     $email = htmlspecialchars($email);
+
+     $password = trim($password);
+     $password = stripslashes($password);
+     $password = htmlspecialchars($password);
+
+     return array($name, $email, $password);
+    
+ }
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     include 'Db.php';
     $name = $_POST['name'];
@@ -6,9 +22,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $password = $_POST['password'];
     $role = $_POST['role'];
 
+    list($name, $email, $password) = sanitize_input($name, $email, $password);
+
     $sql = "INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password', '$role')";
     if(mysqli_query($conn, $sql)){
         echo "You have Registered successfully";
+        header("Location: Dashboard.php");
+        exit();
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
@@ -33,6 +53,8 @@ include 'Header.php';
         <br>
         <input type="text" name="role" value="User" hidden>
         <button type="submit">Register</button>
+        <br>
+        <a href="login.php">Login</a>
 
     </form>
     </div>
